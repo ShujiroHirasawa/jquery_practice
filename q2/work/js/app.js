@@ -1,0 +1,9 @@
+$(function(){$('.modal_open_button').click(function(){
+  //openを押すとモーダルウィンドウがフェードインされる//
+  $('.modal_win').fadeIn();
+});
+$('.modal_close_button').click(function(){
+  //×を押すとフェードアウトされる//
+  $('.modal_win').fadeOut();
+})
+});

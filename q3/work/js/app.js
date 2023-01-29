@@ -1,0 +1,20 @@
+$(function(){
+  //ハンバーガーメニューを押した時ハンバーガーメニューが×に変わりメニューが出てくる//
+  $('.drawer_button').click(function(){
+  //このクラスのcssを削除//
+  $(this).toggleClass('active');
+  //この要素のフェードイン、フェードアウトを交互にする//
+  $('.drawer_bg').fadeToggle();
+  //「nav」に「open」のクラスを追加//
+  $('nav').toggleClass('open');
+});
+//×、暗い部分を押すとメニューが閉じて元に戻る//
+$('.drawer_bg').click(function(){
+  //この要素を隠す//
+  $(this).hide();
+  //「.drawer_button」から「active」を取り除いている//
+  $('.drawer_button').removeClass('active');
+  //「nav」から「open」を削除//
+  $('nav').removeClass('open');
+})
+});
